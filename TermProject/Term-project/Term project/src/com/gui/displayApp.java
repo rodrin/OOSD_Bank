@@ -6,11 +6,13 @@
 package com.gui;
 
 import com.model.BankAccount;
+import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 
 /**
  *
- * @author Nann
+ * @author BlueScreen
  */
 public class displayApp extends javax.swing.JFrame {
 
@@ -41,91 +43,180 @@ public class displayApp extends javax.swing.JFrame {
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Profile");
-        setExtendedState(MAXIMIZED_BOTH);
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jButton3.setText("Log out");
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/log out.png"))); // NOI18N
+        jButton3.setToolTipText("Log out");
+        jButton3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jButton3.setBorderPainted(false);
+        jButton3.setContentAreaFilled(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(170, 200, 170, 100);
+        jButton3.setBounds(200, 320, 80, 70);
 
-        jButton4.setText("Deposit");
+        jButton4.setBorder(BorderFactory.createEmptyBorder());
+        jButton4.setContentAreaFilled(false);
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/deposit.png"))); // NOI18N
+        jButton4.setToolTipText("Deposit");
+        jButton4.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jButton4.setBorderPainted(false);
+        jButton4.setContentAreaFilled(false);
+        jButton4.setMaximumSize(new java.awt.Dimension(0, 0));
+        jButton4.setMinimumSize(new java.awt.Dimension(0, 0));
+        jButton4.setPreferredSize(new java.awt.Dimension(0, 0));
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton4MouseExited(evt);
+            }
+        });
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(170, 100, 170, 100);
+        jButton4.setBounds(150, 100, 70, 70);
 
-        jButton5.setText("Withdraw");
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/withdraw.png"))); // NOI18N
+        jButton5.setToolTipText("withdraw");
+        jButton5.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jButton5.setBorderPainted(false);
+        jButton5.setContentAreaFilled(false);
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton5MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton5MouseExited(evt);
+            }
+        });
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(0, 100, 170, 100);
+        jButton5.setBounds(250, 100, 70, 3);
 
-        jButton6.setText("Transfer");
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/transfer.png"))); // NOI18N
+        jButton6.setToolTipText("Transfer");
+        jButton6.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jButton6.setBorderPainted(false);
+        jButton6.setContentAreaFilled(false);
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton6MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton6MouseExited(evt);
+            }
+        });
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(170, 50, 170, 50);
+        jButton6.setBounds(150, 190, 70, 3);
 
-        jButton7.setText("Create account");
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/create.png"))); // NOI18N
+        jButton7.setToolTipText("Create account");
+        jButton7.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jButton7.setBorderPainted(false);
+        jButton7.setContentAreaFilled(false);
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton7MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton7MouseExited(evt);
+            }
+        });
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton7);
-        jButton7.setBounds(0, 0, 170, 100);
+        jButton7.setBounds(50, 100, 70, 70);
 
-        jButton8.setText("Statemant Print");
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/print.png"))); // NOI18N
+        jButton8.setToolTipText("Print Statemant");
+        jButton8.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jButton8.setBorderPainted(false);
+        jButton8.setContentAreaFilled(false);
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton8);
-        jButton8.setBounds(0, 200, 170, 50);
+        jButton8.setBounds(110, 320, 80, 70);
 
-        jButton9.setText("Transfer<account>");
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/transfer account.png"))); // NOI18N
+        jButton9.setToolTipText("Transfer<account>");
+        jButton9.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jButton9.setBorderPainted(false);
+        jButton9.setContentAreaFilled(false);
+        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton9MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton9MouseExited(evt);
+            }
+        });
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton9);
-        jButton9.setBounds(170, 0, 170, 50);
+        jButton9.setBounds(250, 190, 70, 70);
 
-        jButton12.setText("Interest");
+        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/interest.png"))); // NOI18N
+        jButton12.setToolTipText("Interest");
+        jButton12.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jButton12.setBorderPainted(false);
+        jButton12.setContentAreaFilled(false);
+        jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton12MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton12MouseExited(evt);
+            }
+        });
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton12ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton12);
-        jButton12.setBounds(0, 250, 170, 50);
+        jButton12.setBounds(50, 190, 70, 70);
+        getContentPane().add(filler1);
+        filler1.setBounds(250, 120, 0, 0);
 
-        jButton11.setText("Statemant Print");
-        getContentPane().add(jButton11);
-        jButton11.setBounds(0, 250, 170, 50);
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/menu.png"))); // NOI18N
+        jLabel1.setToolTipText("Menu");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(90, 10, 220, 60);
 
-        setSize(new java.awt.Dimension(346, 329));
+        setSize(new java.awt.Dimension(418, 447));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -195,21 +286,62 @@ public class displayApp extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_jButton12ActionPerformed
 
+    private void jButton4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseEntered
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/deposit2.png")));
+    }//GEN-LAST:event_jButton4MouseEntered
+
+    private void jButton4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseExited
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/deposit.png")));
+    }//GEN-LAST:event_jButton4MouseExited
+
+    private void jButton7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseEntered
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/create2.png")));
+    }//GEN-LAST:event_jButton7MouseEntered
+
+    private void jButton7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseExited
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/create.png")));
+    }//GEN-LAST:event_jButton7MouseExited
+
+    private void jButton5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseEntered
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/withdraw2.png")));
+    }//GEN-LAST:event_jButton5MouseEntered
+
+    private void jButton5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseExited
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/withdraw.png")));
+    }//GEN-LAST:event_jButton5MouseExited
+
+    private void jButton12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseEntered
+         jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/interest2.png")));
+    }//GEN-LAST:event_jButton12MouseEntered
+
+    private void jButton12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseExited
+        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/interest.png")));
+    }//GEN-LAST:event_jButton12MouseExited
+
+    private void jButton6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseEntered
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/transfer2.png")));
+    }//GEN-LAST:event_jButton6MouseEntered
+
+    private void jButton6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseExited
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/transfer.png")));
+    }//GEN-LAST:event_jButton6MouseExited
+
+    private void jButton9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseEntered
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/transfer account2.png")));
+    }//GEN-LAST:event_jButton9MouseEntered
+
+    private void jButton9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseExited
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/transfer account.png")));
+    }//GEN-LAST:event_jButton9MouseExited
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
+                UIManager.setLookAndFeel("com.jtattoo.plaf.hifi.HiFiLookAndFeel");
             }
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(displayApp.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
@@ -235,7 +367,7 @@ public class displayApp extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
-    private javax.swing.JButton jButton11;
+    private javax.swing.Box.Filler filler1;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -244,5 +376,6 @@ public class displayApp extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
