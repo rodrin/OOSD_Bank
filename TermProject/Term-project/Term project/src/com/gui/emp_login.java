@@ -8,10 +8,11 @@ package com.gui;
 import com.model.BankAccount;
 import com.model.BankOfficer;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 
 /**
  *
- * @author Nann
+ * @author BlueScreen
  */
 public class emp_login extends javax.swing.JFrame {
 
@@ -43,28 +44,40 @@ public class emp_login extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
-        loginButton.setText("Enter");
+        loginButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/locked.png"))); // NOI18N
+        loginButton.setToolTipText("Enter");
+        loginButton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        loginButton.setBorderPainted(false);
+        loginButton.setContentAreaFilled(false);
+        loginButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                loginButtonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                loginButtonMouseExited(evt);
+            }
+        });
         loginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginButtonActionPerformed(evt);
             }
         });
         getContentPane().add(loginButton);
-        loginButton.setBounds(80, 170, 70, 30);
+        loginButton.setBounds(80, 170, 70, 70);
 
-        passwordLabel.setText("Password");
+        passwordLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/password.png"))); // NOI18N
         getContentPane().add(passwordLabel);
-        passwordLabel.setBounds(40, 90, 80, 30);
+        passwordLabel.setBounds(20, 100, 130, 20);
 
-        usernameLabel.setText("Username");
+        usernameLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/username.png"))); // NOI18N
         getContentPane().add(usernameLabel);
-        usernameLabel.setBounds(40, 20, 80, 30);
+        usernameLabel.setBounds(20, 30, 120, 20);
         getContentPane().add(user);
         user.setBounds(40, 50, 160, 30);
         getContentPane().add(pass);
         pass.setBounds(40, 120, 160, 30);
 
-        setSize(new java.awt.Dimension(244, 249));
+        setSize(new java.awt.Dimension(254, 306));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -72,7 +85,7 @@ public class emp_login extends javax.swing.JFrame {
             // TODO add your handling code here:
         BankOfficer a = BankOfficer.searchEmp(user.getText(), pass.getText());
         if(a != null){
-            JOptionPane.showMessageDialog(this,"'"+a.getEmp_name()+"' log in sucess!");
+            JOptionPane.showMessageDialog(this," "+a.getEmp_name()+"  log in sucess!");
             displayApp profile = new displayApp();
             profile.setVisible(true);
             setVisible(false);
@@ -82,21 +95,22 @@ public class emp_login extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_loginButtonActionPerformed
 
+    private void loginButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginButtonMouseEntered
+        loginButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/unlock.png")));
+    }//GEN-LAST:event_loginButtonMouseEntered
+
+    private void loginButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginButtonMouseExited
+        loginButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/locked.png")));
+    }//GEN-LAST:event_loginButtonMouseExited
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
+                UIManager.setLookAndFeel("com.jtattoo.plaf.hifi.HiFiLookAndFeel");
             }
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(emp_login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
