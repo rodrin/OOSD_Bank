@@ -12,10 +12,11 @@ import java.awt.GridLayout;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.UIManager;
 
 /**
  *
- * @author Nann
+ * @author BlueScreen
  */
 public class create_account extends javax.swing.JFrame {
 
@@ -35,7 +36,6 @@ public class create_account extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jRadioButton1 = new javax.swing.JRadioButton();
@@ -63,61 +63,64 @@ public class create_account extends javax.swing.JFrame {
         age = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setText("Create account");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(320, 20, 220, 60);
-
-        jLabel2.setText("Name-Surname");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/fullname.png"))); // NOI18N
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(40, 100, 110, 30);
+        jLabel2.setBounds(30, 100, 120, 30);
 
-        jLabel3.setText("Deposit");
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/deposit label.png"))); // NOI18N
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(420, 100, 60, 30);
+        jLabel3.setBounds(430, 100, 80, 30);
 
-        jRadioButton1.setText("Male");
+        jRadioButton1.setContentAreaFilled(false);
         getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(540, 150, 60, 30);
+        jRadioButton1.setBounds(530, 150, 60, 30);
 
-        jRadioButton2.setText("Female");
+        jRadioButton2.setContentAreaFilled(false);
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(620, 150, 90, 30);
+        jRadioButton2.setBounds(610, 150, 40, 30);
 
-        jLabel4.setText("Gender");
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/FEMALE.png"))); // NOI18N
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(420, 150, 50, 30);
+        jLabel4.setBounds(630, 150, 0, 30);
 
-        jLabel5.setText("Identity card number");
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/ID NUM.png"))); // NOI18N
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(40, 150, 120, 30);
+        jLabel5.setBounds(50, 150, 100, 30);
         getContentPane().add(idno);
         idno.setBounds(160, 150, 170, 30);
         getContentPane().add(birthdate);
         birthdate.setBounds(530, 200, 110, 30);
 
-        jLabel6.setText("Address :");
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/ADDRESS.png"))); // NOI18N
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(40, 300, 60, 100);
+        jLabel6.setBounds(70, 270, 90, 100);
 
-        jLabel7.setText("Date of birth");
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/BIRTH.png"))); // NOI18N
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(420, 200, 80, 30);
+        jLabel7.setBounds(380, 200, 140, 30);
         getContentPane().add(deposit);
         deposit.setBounds(530, 100, 170, 30);
 
-        jLabel8.setText("Age");
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/AGE.png"))); // NOI18N
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(420, 250, 100, 30);
+        jLabel8.setBounds(460, 250, 100, 30);
 
-        jLabel9.setText("E-mail");
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/EMAIL.png"))); // NOI18N
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(40, 250, 40, 30);
+        jLabel9.setBounds(90, 250, 60, 30);
 
         name.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,13 +139,13 @@ public class create_account extends javax.swing.JFrame {
         getContentPane().add(jScrollPane2);
         jScrollPane2.setBounds(160, 300, 166, 96);
 
-        jLabel10.setText("D / M / Y");
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/DMY.png"))); // NOI18N
         getContentPane().add(jLabel10);
         jLabel10.setBounds(650, 200, 60, 30);
 
-        jLabel11.setText("Career");
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/CARRER.png"))); // NOI18N
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(420, 300, 40, 30);
+        jLabel11.setBounds(440, 300, 80, 30);
         getContentPane().add(revenue);
         revenue.setBounds(530, 350, 170, 30);
 
@@ -150,35 +153,57 @@ public class create_account extends javax.swing.JFrame {
         getContentPane().add(jComboBox2);
         jComboBox2.setBounds(530, 300, 110, 30);
 
-        jLabel12.setText("Revenue per month");
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/REVENUE.png"))); // NOI18N
         getContentPane().add(jLabel12);
-        jLabel12.setBounds(420, 350, 110, 30);
+        jLabel12.setBounds(360, 350, 250, 30);
         getContentPane().add(phone);
         phone.setBounds(160, 200, 170, 30);
 
-        jLabel13.setText("Phone number");
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/PHONE NUM.png"))); // NOI18N
         getContentPane().add(jLabel13);
-        jLabel13.setBounds(40, 200, 90, 30);
+        jLabel13.setBounds(-20, 200, 170, 30);
         getContentPane().add(age);
         age.setBounds(530, 250, 170, 30);
 
-        jButton3.setText("Cancel");
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/close.png"))); // NOI18N
+        jButton3.setToolTipText("Cancel");
+        jButton3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jButton3.setBorderPainted(false);
+        jButton3.setContentAreaFilled(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(270, 410, 100, 60);
+        jButton3.setBounds(280, 410, 80, 90);
 
-        jButton2.setText("Next");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/ok.png"))); // NOI18N
+        jButton2.setToolTipText("Next");
+        jButton2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jButton2.setBorderPainted(false);
+        jButton2.setContentAreaFilled(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(380, 410, 100, 60);
+        jButton2.setBounds(380, 420, 80, 70);
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/create account.png"))); // NOI18N
+        jLabel14.setToolTipText("Menu");
+        getContentPane().add(jLabel14);
+        jLabel14.setBounds(40, 20, 680, 60);
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/GENDER.png"))); // NOI18N
+        getContentPane().add(jLabel15);
+        jLabel15.setBounds(430, 150, 80, 30);
+
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gui/resource/MALE.png"))); // NOI18N
+        getContentPane().add(jLabel16);
+        jLabel16.setBounds(540, 150, 0, 30);
 
         setSize(new java.awt.Dimension(769, 567));
         setLocationRelativeTo(null);
@@ -231,22 +256,20 @@ public class create_account extends javax.swing.JFrame {
         
     }//GEN-LAST:event_nameActionPerformed
 
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
+                 UIManager.setLookAndFeel("com.jtattoo.plaf.hifi.HiFiLookAndFeel");
             }
+            
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(create_account.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
@@ -279,11 +302,13 @@ public class create_account extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JComboBox jComboBox2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
